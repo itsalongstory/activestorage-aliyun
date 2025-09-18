@@ -134,7 +134,7 @@ module ActiveStorage
     def private_url(key, expires_in: 60, filename: nil, content_type: nil, disposition: nil, params: {}, **)
       filekey = path_for(key)
 
-      params["response-content-type"] = content_type unless content_type.blank?
+      # params["response-content-type"] = content_type unless content_type.blank?
 
       if filename
         filename = ActiveStorage::Filename.wrap(filename)
